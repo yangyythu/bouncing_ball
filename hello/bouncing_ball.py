@@ -193,10 +193,12 @@ def main():
                     show_trail = not show_trail
                 # Change gravity
                 elif event.key == pygame.K_g:
-                    GRAVITY = 0.5 if GRAVITY == 0.5 else (0.2 if GRAVITY == 0.5 else 0.5)
+                    global GRAVITY
+                    GRAVITY = 0.2 if GRAVITY == 0.5 else 0.5
                 # Change elasticity
                 elif event.key == pygame.K_e:
-                    ELASTICITY = 0.8 if ELASTICITY == 0.8 else (0.6 if ELASTICITY == 0.8 else 0.8)
+                    global ELASTICITY
+                    ELASTICITY = 0.6 if ELASTICITY == 0.8 else 0.8
         
         # Update
         if not paused:
